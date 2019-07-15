@@ -94,6 +94,11 @@ mean(actor_age$Age)
 range(actor_age$Age)
 76 - 29
 max(actor_age$Age) - min(range(actor_age$Age))
+summary(actor_age$Age)
+Q3 <- 50.25
+IQR(actor_age$Age)
+upperL <- Q3 + IQR(actor_age$Age)
+actor_age$Age[actor_age$Age > upperL]
 
 hours <- c(1, 6, 7, 5, 5, 8, 11, 12, 15)
 mean(hours)
@@ -113,10 +118,86 @@ counts <- c(6,4,4,3,3,2,6,5,4,7,2,17)
 sum(counts)
 (sum(counts)+1)/2
 
+q1 <- 95
+q3 <- 120
+iqr <- q3 - q1 
+q3 + 1.5 * iqr
+q1 - 1.5 * iqr
+
+q1 <- 130
+q3 <- 150
+iqr <- q3 - q1 
+q3 + 1.5 * iqr
+q1 - 1.5 * iqr
+
 
 counts2 <- c(3,3,8,4,1,1,4,2,1,2,1)
 sum(counts2)
 sum(counts2)/2
+
+with(actor_age, {
+  boxplot(Age)
+  cat(rep('-', 30))
+  print(length(Age))
+  print(summary(Age))
+  print(min(Age))
+  print(max(Age))
+  print(max(Age) - min(Age))
+  print(median(Age))
+  print(IQR(Age))
+
+  cat(rep('-', 30))
+  print(quantile(Age))
+  print(quantile(Age, 0.25))
+  print(quantile(Age, 0.75))
+  
+  cat(rep('-', 30))
+  print(mean(Age))
+  print(var(Age))
+  print(sd(Age))
+  cat(rep('-', 30))
+})
+
+boxplot(actor_age$Age)
+
+load('graduation.RData')
+str(grad_data)
+dim(grad_data)
+nrow(grad_data)
+ncol(grad_data)
+names(grad_data)
+head(grad_data)
+tail(grad_data)
+summary(grad_data)
+
+boxplot(grad_data)
+boxplot(grad_data, 
+        xlab="Colleges",ylab ="Graduation Rates",
+        main="Comparison of Graduation Rates")
+
+boxplot(grad_data, horizontal=TRUE,
+        ylab="Colleges",xlab ="Graduation Rates",
+        main="Comparison of Graduation Rates")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
