@@ -48,3 +48,81 @@ labels(t)
 str(t)
 attr(t, "dimnames") <- list(xlbl); t
 barplot(t)
+
+
+grades <- c(88, 48, 60, 51, 57, 85, 69, 75, 97, 72, 71, 79, 65, 63, 73)
+hist(grades)
+
+length(grades)
+7/15*100
+3/32
+
+median(grades)
+range(grades)
+
+load('actor_2013.RData')
+str(actor_age)
+dim(actor_age)
+nrow(actor_age)
+ncol(actor_age)
+names(actor_age)
+
+x11()
+hist(actor_age$Age)
+hist(actor_age$Age, xlab="Age of Best Actor Oscar Winners (1970-2013)", main="")
+hist(actor_age$Age, xlab="Age of Best Actor Oscar Winners (1970-2013)",
+           ylab="Number of Actors", main="Best Actor Oscar Winners Ages")
+hist(actor_age$Age, breaks = 8,
+     xlab="Age of Best Actor Oscar Winners (1970-2013)",
+     ylab="Number of Actors", main="Best Actor Oscar Winners Ages")
+hist(actor_age$Age, breaks = 5,
+     xlab="Age of Best Actor Oscar Winners (1970-2013)",
+     ylab="Number of Actors", main="Best Actor Oscar Winners Ages")
+hist(actor_age$Age, breaks = 25,
+     xlab="Age of Best Actor Oscar Winners (1970-2013)",
+     ylab="Number of Actors", main="Best Actor Oscar Winners Ages")
+?x11
+dev.off()
+hist(actor_age$Age)
+
+sorted_age <- sort(actor_age$Age)
+length(sorted_age)
+midp <- length(sorted_age)/2
+(sorted_age[midp] + sorted_age[midp+1])/2
+median(actor_age$Age)
+mean(actor_age$Age)
+range(actor_age$Age)
+76 - 29
+max(actor_age$Age) - min(range(actor_age$Age))
+
+hours <- c(1, 6, 7, 5, 5, 8, 11, 12, 15)
+mean(hours)
+
+hours2 <- c(rep(1,3),rep(2,5),rep(3,15),rep(4,25),
+           rep(5,20),rep(6,15),rep(7,5),rep(8,1),
+           rep(9,1)); hours
+mean(hours2)
+
+hours3 <- c(1, 6, 7, 5, 8, 5, 11, 12, 15)
+sorted_hours3 <- sort(hours3)
+midp3 <- (length(sorted_hours3) + 1) /2
+sorted_hours3[midp3]
+median(hours3)
+
+counts <- c(6,4,4,3,3,2,6,5,4,7,2,17)
+sum(counts)
+(sum(counts)+1)/2
+
+
+counts2 <- c(3,3,8,4,1,1,4,2,1,2,1)
+sum(counts2)
+sum(counts2)/2
+
+
+
+
+
+
+
+
+
