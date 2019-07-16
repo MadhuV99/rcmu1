@@ -33,9 +33,8 @@ t = table(friends$Friends);t
 pie(t)
 
 prop = prop.table(t);prop
-percent=prop.table(t)*100;percent
 str(prop)
-
+percent=prop.table(t)*100;percent
 pf = round(percent,1);pf
 lbl = paste(c("No difference ","Opposite sex ","Same sex "),pf,"%",sep="");lbl
 
@@ -178,32 +177,5 @@ boxplot(grad_data,
 boxplot(grad_data, horizontal=TRUE,
         ylab="Colleges",xlab ="Graduation Rates",
         main="Comparison of Graduation Rates")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
